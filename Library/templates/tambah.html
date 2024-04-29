@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolej Vokasional Cyberjaya - Tambah Buku Baru</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kolej Vokasional Cyberjaya | e-library</h1>
+            <h2>Tambah Buku</h2>
+        </div>
+
+        <form action="{{ url_for('tambah_buku') }}" method="POST" class="form-container">
+            <div class="form-group">
+                <label for="tajuk">Tajuk:</label>
+                <input type="text" id="tajuk" name="tajuk" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pengarang">Pengarang:</label>
+                <input type="text" id="pengarang" name="pengarang" required>
+            </div>
+
+            <div class="form-group">
+                <label for="penerbit">Penerbit:</label>
+                <input type="text" id="penerbit" name="penerbit" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tahun_terbit">Tahun Terbit:</label>
+                <input type="text" id="tahun_terbit" name="tahun_terbit" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kategori">Kategori:</label>
+                <select id="kategori" name="kategori" required>
+                    <option value="" disabled selected>Pilih Kategori</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-Fiction">Non-Fiction</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Mystery">Thriller</option>
+                    <option value="Mystery">Romance</option>
+                    <option value="Mystery">Historical</option>
+                    <option value="Mystery">Biography</option>
+                    <option value="Mystery">Self-Help</option>
+                    <option value="Mystery">Business</option>
+                    <option value="Mystery">Cookbooks</option>
+                    <option value="Mystery">Poetry</option>
+                    <option value="Mystery">Art</option>
+                    <option value="Mystery">Travel</option>
+                    <option value="Mystery">History</option>
+                    <option value="Mystery">Philosophy</option>
+                    <option value="Mystery">Religion</option>
+                    
+                    <!-- ... -->
+                </select>
+            </div>
+
+            <button type="submit">Tambah Buku</button>
+        </form>
+
+        <a href="{{ url_for('senarai_buku') }}">Kembali ke Senarai Buku</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5; /* Ganti dengan warna pastel yang diinginkan */
+    color: #555;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin-bottom: 5px;
+}
+
+.header h2 {
+    margin-top: 0;
+}
+
+.form-container,
+.search-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    background-color: #e6e6fa; /* Ganti dengan warna pastel yang diinginkan */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #87ceeb; /* Ganti dengan warna pastel yang diinginkan */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6495ed; /* Ganti dengan warna pastel yang diinginkan */
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.book-table th,
+.book-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.book-table th {
+    background-color: #87ceeb; /* Ganti dengan warna pastel yang diinginkan */
+    color: #fff;
+}
+
+.delete-link {
+    color: #dc3545;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+.add-book-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #98fb98; /* Ganti dengan warna pastel yang diinginkan */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.add-book-link:hover {
+    background-color: #8fbc8f; /* Ganti dengan warna pastel yang diinginkan */
+}

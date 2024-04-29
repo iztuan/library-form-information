@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolej Vokasional Cyberjaya - Senarai Buku</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Kolej Vokasional Cyberjaya | e-Library</h1>
+        <h2>Senarai Buku</h2>
+    </div>
+
+    <div class="container">
+        <form action="{{ url_for('senarai_buku') }}" method="GET" class="search-form">
+            <input type="text" id="carian" name="carian" placeholder="Cari...">
+            <button type="submit">Cari</button>
+        </form>
+
+        <table class="book-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tajuk</th>
+                    <th>Pengarang</th>
+                    <th>Penerbit</th>
+                    <th>Tahun Terbit</th>
+                    <th>Kategori</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for buku in senarai %}
+                    <tr>
+                        <td>{{ buku.id }}</td>
+                        <td>{{ buku.tajuk }}</td>
+                        <td>{{ buku.pengarang }}</td>
+                        <td>{{ buku.penerbit }}</td>
+                        <td>{{ buku.tahun_terbit }}</td>
+                        <td>{{ buku.kategori }}</td>
+                        <td><a href="{{ url_for('padam_buku', buku_id=buku.id) }}" class="delete-link">Padam</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('tambah_buku') }}" class="add-book-link">Tambah Buku</a>
+    </div>
+</body>
+</html>
